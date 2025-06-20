@@ -23,7 +23,7 @@ export default function CommunitySupportSection() {
           Letters of Hope
         </Typography>
         <Typography sx={{ mb: 3 }}>
-          A moderated space where the public can submit encouraging letters,
+          A moderated space where the public can submit encouraging letters,<br />
           poems, and artwork – promoting empathy and collective healing across communities.
         </Typography>
         <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
@@ -54,7 +54,7 @@ export default function CommunitySupportSection() {
           Fundraising & Donations
         </Typography>
         <Typography sx={{ mb: 3 }}>
-          Support survivors directly through our secure donation portal.
+          Support survivors directly through our secure donation portal.<br />
           Every contribution helps fund medical treatments, legal aid, skill development, and community programs.
         </Typography>
         <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>

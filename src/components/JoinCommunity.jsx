@@ -7,12 +7,11 @@ export default function JoinCommunity() {
       sx={{
         width: '100%',
         py: 10,
-        px: 2,
         background: 'linear-gradient(to right, #f97316, #ec4899)',
         color: 'white',
         textAlign: 'center',
-        borderRadius: 0, // remove any border radius
-        m: 0, // remove margin
+        borderRadius: 0, 
+        m: 0, 
       }}
     >
       <Typography variant="h4" fontWeight="bold" gutterBottom>

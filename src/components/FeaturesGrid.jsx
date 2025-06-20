@@ -8,48 +8,54 @@ import {
   Box,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import PeopleIcon from '@mui/icons-material/People';
 import MapIcon from '@mui/icons-material/Map';
 import GavelIcon from '@mui/icons-material/Gavel';
-import WorkIcon from '@mui/icons-material/Work';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const features = [
-  
   {
     title: 'Geo-tagged Resource Map',
-    icon: <MapIcon fontSize="large" />,
+    icon: <MapIcon />,
     path: '/map',
-    description: 'Locate support centers, NGOs, and care facilities near you.',
-    bullets: ['Location based seacrh', 'Direct contact info', 'community ratings'],
+    iconBg: '#fdecef',
+    iconColor: '#ec407a',
+    description: 'Interactive map of India showing NGOs, medical facilities, legal aid, and counseling centers.',
+    bullets: ['📍 Location-based search', '☎️ Direct contact info', '⭐ Community ratings'],
+    hoverBorderColor: 'rgb(233, 179, 197)',
   },
   {
     title: 'AI Legal Aid Assistant',
-    icon: <GavelIcon fontSize="large" />,
+    icon: <GavelIcon />,
     path: '/legal-aid',
-    description: 'Find guidance and assistance on legal rights and support.',
-    bullets: ['24/7 legal guidance', 'Multi language support', 'Confidential consulations'],
+    iconBg: '#f3e8ff',
+    iconColor: '#9c27b0',
+    description: 'Get instant legal guidance and assistance using advanced AI technology.',
+    bullets: ['⚖️ 24/7 legal guidance', '🌐 Multi-language support', '🔒 Confidential consultations'],
+    hoverBorderColor: 'rgb(225, 166, 237)',
   },
-  
   {
     title: 'Peer Support',
-    icon: <SupportAgentIcon fontSize="large" />,
+    icon: <SupportAgentIcon />,
     path: '/support',
-    description: 'Talk to others, join groups, and find emotional support.',
-    bullets: ['Moderated discussions', 'Emotional support', 'Peer connections'],
+    iconBg: '#e8f5fe',
+    iconColor: '#2196f3',
+    description: 'A safe, moderated space to share experiences,and offer mutual support in a community.',
+    bullets: ['🧑‍⚖️ Moderated discussions', '❤️ Emotional support', '🧑‍🤝‍🧑 Peer connections'],
+    hoverBorderColor: 'rgb(199, 198, 220)',
   },
   {
     title: 'Inspiration Hub',
-    icon: <EmojiEmotionsIcon fontSize="large" />,
+    icon: <EmojiEmotionsIcon />,
     path: '/inspiration',
-    description: 'Read real-life stories and inspiring journeys of survivors.',
-    bullets: ['Success stories', 'Resilience features', 'Community initiatives'],
+    iconBg: '#fff8e1',
+    iconColor: '#ffb300',
+    description: 'Read real-life stories of resilience, and inspiring journeys of survivors.',
+    bullets: ['🏆 Success stories', '💪 Resilience features', '🧩 Community initiatives'],
+    hoverBorderColor: 'rgb(213, 174, 142)',
   },
 ];
 
@@ -60,7 +66,7 @@ function FeaturesGrid() {
     <Box
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(to right,rgb(255, 255, 255), #fff)', 
+        background: 'linear-gradient(to right, #ffffff, #fff)',
         py: 6,
         px: 3,
       }}
@@ -77,44 +83,50 @@ function FeaturesGrid() {
         {features.map((feature) => (
           <Grid item xs={12} sm={6} md={4} key={feature.title} sx={{ display: 'flex' }}>
             <Card
-             sx={{
+              sx={{
                 flexGrow: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
+                border: '2px solid transparent',
                 transition: '0.3s',
-              '&:hover': {
-                transform: 'scale(1.05)',
-                boxShadow: 6,
+                '&:hover': {
+                  transform: 'scale(1.03)',
+                  boxShadow: 6,
+                  borderColor: feature.hoverBorderColor,
+                  transform: 'scale(1.03)',
+                  boxShadow: 4,
                 },
               }}
-  >
-            <CardActionArea
-                    onClick={() => navigate(feature.path)}
-                    sx={{ height: '100%', width: '100%' }}
             >
+              <CardActionArea onClick={() => navigate(feature.path)} sx={{ height: '100%', width: '100%' }}>
                 <CardContent>
-                  {/* Icon top-left */}
-                  <Box sx={{ position: 'absolute', top: 16, left: 16 }}>
+                  {/* Icon box */}
+                  <Box
+                    sx={{
+                      width: 50,
+                      height: 50,
+                      backgroundColor: feature.iconBg,
+                      color: feature.iconColor,
+                      borderRadius: 2,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mb: 2,
+                    }}
+                  >
                     {feature.icon}
                   </Box>
 
-                  {/* Title with left padding to avoid overlapping icon */}
-                  <Typography variant="h6" fontWeight="bold" sx={{ pl: 6, mb: 1 }}>
+                  {/* Title & description */}
+                  <Typography variant="h6" fontWeight="bold" gutterBottom>
                     {feature.title}
                   </Typography>
-
-                  <Typography variant="body2" color="text.secondary" sx={{ pl: 6, mb: 2 }}>
+                  <Typography variant="body2" color="text.secondary" gutterBottom>
                     {feature.description}
                   </Typography>
 
-                  <List dense sx={{ pl: 4 }}>
+                  {/* Emoji bullet points */}
+                  <List dense>
                     {feature.bullets.map((item, i) => (
-                      <ListItem key={i} disableGutters>
-                        <ListItemIcon sx={{ minWidth: 32 }}>
-                          <CheckCircleIcon color="success" fontSize="small" />
-                        </ListItemIcon>
+                      <ListItem key={i} disableGutters sx={{ pl: 0 }}>
                         <ListItemText primary={item} />
                       </ListItem>
                     ))}

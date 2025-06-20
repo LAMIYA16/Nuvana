@@ -8,7 +8,7 @@ export default function Hero() {
     textAlign: 'center',
     py: 8,
     px: 2,
-    backgroundImage: 'linear-gradient(to bottom,rgb(218, 206, 192), #ffffff)', 
+    backgroundImage: 'linear-gradient(to bottom,rgb(216, 169, 179), #ffffff)', 
     backgroundSize: 'cover',
   }}
 >
@@ -18,18 +18,18 @@ export default function Hero() {
           display: "inline-block",
           paddingX: 2,
           paddingY: 0.1,
-          backgroundColor: "rgb(218, 189, 170)",
+          backgroundColor: "rgb(251, 243, 245)",
           borderRadius: "30px",
           marginBottom: 2,
         }}
       >
-        <Typography variant="subtitle1" fontWeight="bold" sx={{ color: 'rgb(79, 77, 71)' }} >
+        <Typography variant="subtitle1" fontWeight="bold" sx={{ color: 'rgb(63, 60, 61)' }} >
           Empowering Survivors • Building Community • Creating Hope
         </Typography>
       </Box>
 
       <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
-        A Platform of <span style={{ color: '#FF7043' }}>Strength & Solidarity</span>
+        A Platform of <span style={{ color: 'rgb(184, 118, 98)' }}>Strength & Solidarity</span>
       </Typography>
 
       <Typography variant="body1" sx={{ maxWidth: 800, mx: "auto", mt: 1 }}>
@@ -41,10 +41,10 @@ export default function Hero() {
     variant="contained"
     sx={{
       mr: 2,
-      backgroundColor: 'hsla(27, 75.70%, 43.50%, 0.69)', 
+      backgroundColor: 'hsla(350, 73.00%, 53.50%, 0.69)', 
       color: 'white',
       '&:hover': {
-        backgroundColor: 'rgba(199, 168, 125, 0.85)', 
+        backgroundColor: 'rgba(199, 97, 129, 0.85)', 
       },
     }}
   >
@@ -53,12 +53,12 @@ export default function Hero() {
   <Button
     variant="outlined"
     sx={{
-      color: ' rgb(249, 125, 24)',
-      borderColor: 'rgb(135, 74, 13)',
+      color: ' rgb(58, 56, 58)',
+      borderColor: 'rgb(205, 64, 104)',
       '&:hover': {
-        backgroundColor: 'rgb(234, 225, 218)', 
-        borderColor: '#d81b60',
-        color: 'rgb(199, 139, 140)',
+        backgroundColor: 'rgb(185, 94, 130)', 
+        borderColor: 'rgb(161, 60, 97)',
+        color: 'rgb(255, 255, 255)',
       },
     }}
   >

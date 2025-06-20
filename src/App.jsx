@@ -1,4 +1,6 @@
 import React from "react";
+import { Box } from '@mui/material';
+import Navbar from './components/navbar';
 import Hero from './components/Hero';
 import FeaturesGrid from './components/FeaturesGrid';
 import CommunitySupport from './components/CommunitySupport';
@@ -9,6 +11,8 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
+      <Navbar />
+      <Box sx={{ pt: '60px' }}></Box>
       <Hero/>     
       <FeaturesGrid />
       <CommunitySupport />  
