@@ -23,8 +23,13 @@ const features = [
     path: '/map',
     iconBg: '#fdecef',
     iconColor: '#ec407a',
-    description: 'Interactive map of India showing NGOs, medical facilities, legal aid, and counseling centers.',
-    bullets: ['📍 Location-based search', '☎️ Direct contact info', '⭐ Community ratings'],
+    description:
+      'Interactive map of India showing NGOs, medical facilities, legal aid, and counseling centers.',
+    bullets: [
+      '📍 Location-based search',
+      '☎️ Direct contact info',
+      '⭐ Community ratings',
+    ],
     hoverBorderColor: 'rgb(233, 179, 197)',
   },
   {
@@ -33,8 +38,13 @@ const features = [
     path: '/legal-aid',
     iconBg: '#f3e8ff',
     iconColor: '#9c27b0',
-    description: 'Get instant legal guidance and assistance using advanced AI technology.',
-    bullets: ['⚖️ 24/7 legal guidance', '🌐 Multi-language support', '🔒 Confidential consultations'],
+    description:
+      'Get instant legal guidance and assistance using advanced AI technology.',
+    bullets: [
+      '⚖️ 24/7 legal guidance',
+      '🌐 Multi-language support',
+      '🔒 Confidential consultations',
+    ],
     hoverBorderColor: 'rgb(225, 166, 237)',
   },
   {
@@ -43,8 +53,13 @@ const features = [
     path: '/support',
     iconBg: '#e8f5fe',
     iconColor: '#2196f3',
-    description: 'A safe, moderated space to share experiences,and offer mutual support in a community.',
-    bullets: ['🧑‍⚖️ Moderated discussions', '❤️ Emotional support', '🧑‍🤝‍🧑 Peer connections'],
+    description:
+      'A safe, moderated space to share experiences, and offer mutual support in a community.',
+    bullets: [
+      '🧑‍⚖️ Moderated discussions',
+      '❤️ Emotional support',
+      '🧑‍🤝‍🧑 Peer connections',
+    ],
     hoverBorderColor: 'rgb(199, 198, 220)',
   },
   {
@@ -53,8 +68,13 @@ const features = [
     path: '/inspiration',
     iconBg: '#fff8e1',
     iconColor: '#ffb300',
-    description: 'Read real-life stories of resilience, and inspiring journeys of survivors.',
-    bullets: ['🏆 Success stories', '💪 Resilience features', '🧩 Community initiatives'],
+    description:
+      'Read real-life stories of resilience, and inspiring journeys of survivors.',
+    bullets: [
+      '🏆 Success stories',
+      '💪 Resilience features',
+      '🧩 Community initiatives',
+    ],
     hoverBorderColor: 'rgb(213, 174, 142)',
   },
 ];
@@ -81,24 +101,32 @@ function FeaturesGrid() {
 
       <Grid container spacing={6} justifyContent="center">
         {features.map((feature) => (
-          <Grid item xs={12} sm={6} md={4} key={feature.title} sx={{ display: 'flex' }}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            key={feature.title}
+            sx={{ display: 'flex' }}
+          >
             <Card
-              sx={{
+              sx={(theme) => ({
                 flexGrow: 1,
                 border: '2px solid transparent',
                 transition: '0.3s',
                 '&:hover': {
                   transform: 'scale(1.03)',
-                  boxShadow: 6,
-                  borderColor: feature.hoverBorderColor,
-                  transform: 'scale(1.03)',
                   boxShadow: 4,
+                  borderColor: feature.hoverBorderColor,
                 },
-              }}
+              })}
             >
-              <CardActionArea onClick={() => navigate(feature.path)} sx={{ height: '100%', width: '100%' }}>
+              <CardActionArea
+                onClick={() => navigate('/map')}
+                sx={{ height: '100%', width: '100%' }}
+              >
                 <CardContent>
-                  {/* Icon box */}
+                 
                   <Box
                     sx={{
                       width: 50,
@@ -115,15 +143,21 @@ function FeaturesGrid() {
                     {feature.icon}
                   </Box>
 
-                  {/* Title & description */}
+                
                   <Typography variant="h6" fontWeight="bold" gutterBottom>
                     {feature.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
+
+                
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    gutterBottom
+                  >
                     {feature.description}
                   </Typography>
 
-                  {/* Emoji bullet points */}
+                  
                   <List dense>
                     {feature.bullets.map((item, i) => (
                       <ListItem key={i} disableGutters sx={{ pl: 0 }}>

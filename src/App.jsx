@@ -6,6 +6,7 @@ import FeaturesGrid from './components/FeaturesGrid';
 import CommunitySupport from './components/CommunitySupport';
 import JoinCommunity from './components/JoinCommunity';
 import Footer from "./components/Footer";
+import MapPage from './pages/MapPage';
 
 
 const App = () => {
