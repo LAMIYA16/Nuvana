@@ -44,7 +44,7 @@ const Footer = () => {
             <Typography variant="h6" color="white" gutterBottom>
               Resources
             </Typography>
-            {["Resource Map", "Legal Aid", "Job Board", "Skill Building"].map((text) => (
+            {["Resource Map", "Legal Aid"].map((text) => (
               <Typography key={text}>
                 <Link href="#" underline="hover" color="#90a4ae">{text}</Link>
               </Typography>

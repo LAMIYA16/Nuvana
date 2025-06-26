@@ -6,7 +6,6 @@ import FeaturesGrid from './components/FeaturesGrid';
 import CommunitySupport from './components/CommunitySupport';
 import JoinCommunity from './components/JoinCommunity';
 import Footer from "./components/Footer";
-import MapPage from './pages/MapPage';
 
 
 const App = () => {
@@ -14,11 +13,25 @@ const App = () => {
     <div>
       <Navbar />
       <Box sx={{ pt: '60px' }}></Box>
-      <Hero/>     
-      <FeaturesGrid />
-      <CommunitySupport />  
-      <JoinCommunity />  
-      <Footer/>
+
+      <section id="resources">
+        <Hero/>
+      
+        
+      </section>
+
+      <section id="features">
+        <FeaturesGrid/>
+      </section>
+
+      <section id="support">
+        <CommunitySupport />
+      </section>
+
+      <section id="about">
+        <JoinCommunity />
+        <Footer />
+      </section>
     </div>
   );
 };

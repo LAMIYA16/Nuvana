@@ -14,7 +14,7 @@ export default function Navbar() {
       position="fixed"
       sx={{
         backgroundColor: 'rgb(255, 255, 255)',
-        color: ' #1a1a1a',
+        color: '#1a1a1a',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         zIndex: (theme) => theme.zIndex.drawer + 1,
       }}
@@ -38,15 +38,15 @@ export default function Navbar() {
             </Box>
           </Box>
 
-          
+          {/* Nav buttons that scroll to section IDs */}
           <Box display="flex" alignItems="center" gap={3}>
-            <Button color="inherit">Features</Button>
-            <Button color="inherit">Resources</Button>
-            <Button color="inherit">Support</Button>
-            <Button color="inherit">About</Button>
+            <Button color="inherit" href="#features">Features</Button>
+            <Button color="inherit" href="#resources">Resources</Button>
+            <Button color="inherit" href="#support">Support</Button>
+            <Button color="inherit" href="#about">About</Button>
           </Box>
 
-         
+          {/* Auth buttons */}
           <Box display="flex" gap={1}>
             <Button
               variant="outlined"
