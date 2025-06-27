@@ -20,8 +20,9 @@ function CommunitySupportSection() {
   <Container maxWidth="lg">
     <Box sx={{ display: 'flex', flexDirection: 'row', gap: 4, flexWrap: 'wrap' }}>
       
-      {/* Letters of Hope */}
-      <Box sx={{ flex: 1, minWidth: 300 }}>
+      
+      <Box id="letters-of-hope"
+        sx={{ flex: 1, minWidth: 300 }}>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           Letters of Hope
         </Typography>

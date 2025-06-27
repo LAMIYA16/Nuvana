@@ -101,15 +101,22 @@ function FeaturesGrid() {
       </Typography>
 
       <Grid container spacing={6} justifyContent="center">
-        {features.map((feature) => (
-          <Grid
+        {features.map((feature, index) => (
+           <Grid
             item
             xs={12}
             sm={6}
             md={4}
             key={feature.title}
-            sx={{ display: 'flex' }}
+           id={
+             feature.title.includes('Resource Map') ? 'feature-map' :
+             feature.title.includes('Legal Aid') ? 'feature-legal' :
+             feature.title.includes('Support') ? 'feature-forum' :
+             feature.title.includes('Inspiration') ? 'feature-success' : undefined
+              }
+         sx={{ display: 'flex' }}
           >
+
             <Card
               sx={(theme) => ({
                 flexGrow: 1,

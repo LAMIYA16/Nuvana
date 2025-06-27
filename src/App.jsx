@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Box sx={{ pt: '100px' }}></Box>
+      <Box sx={{ pt: '60px' }}></Box>
 
       <section id="resources">
         <Hero/>
