@@ -4,6 +4,7 @@ import { Box, Typography, Button, Stack } from '@mui/material';
 export default function JoinCommunity() {
   return (
     <Box
+      id="join-community" 
       sx={{
         width: '100%',
         py: 10,

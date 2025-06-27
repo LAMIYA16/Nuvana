@@ -84,6 +84,7 @@ function FeaturesGrid() {
 
   return (
     <Box
+      id="resources-section"
       sx={{
         minHeight: '100vh',
         background: 'linear-gradient(to right, #ffffff, #fff)',
@@ -122,9 +123,10 @@ function FeaturesGrid() {
               })}
             >
               <CardActionArea
-                onClick={() => navigate('/map')}
-                sx={{ height: '100%', width: '100%' }}
+                 onClick={() => navigate(feature.path)}
+                 sx={{ height: '100%', width: '100%' }}
               >
+
                 <CardContent>
                  
                   <Box

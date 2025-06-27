@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -11,7 +12,9 @@ import {
 import EmailIcon from '@mui/icons-material/Email';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
-export default function CommunitySupportSection() {
+function CommunitySupportSection() {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ background: '#fff0f5', py: 6 }}>
   <Container maxWidth="lg">
@@ -37,18 +40,23 @@ export default function CommunitySupportSection() {
             </Typography>
           </Box>
         </Stack>
-        <Button variant="contained" sx={{
-          background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
-          color: 'white',
-          px: 3,
-          py: 1,
-          textTransform: 'none',
-        }}>
-          Submit a Letter of Hope
-        </Button>
+         <Button
+             variant="contained"
+             onClick={() => navigate('/letters-of-hope')}
+             sx={{
+                 background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
+                 color: 'white',
+                 px: 3,
+                 py: 1,
+                 textTransform: 'none',
+                }}
+          >
+              Submit a Letter of Hope
+          </Button>
+
       </Box>
 
-      {/* Fundraising & Donations */}
+      
       <Box sx={{ flex: 1, minWidth: 300 }}>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           Fundraising & Donations
@@ -68,15 +76,20 @@ export default function CommunitySupportSection() {
             </Typography>
           </Box>
         </Stack>
-        <Button variant="contained" sx={{
-          background: 'linear-gradient(to right, #22c55e, #3b82f6)',
-          color: 'white',
-          px: 3,
-          py: 1,
-          textTransform: 'none',
-        }}>
-          Donate Now
-        </Button>
+        <Button
+            variant="contained"
+            onClick={() => navigate('/donate')}
+            sx={{
+             background: 'linear-gradient(to right, #22c55e, #3b82f6)',
+             color: 'white',
+             px: 3,
+             py: 1,
+             textTransform: 'none',
+             }}
+           >
+           Donate Now
+         </Button>
+
       </Box>
 
     </Box>
@@ -85,3 +98,5 @@ export default function CommunitySupportSection() {
 
   );
 }
+
+export default CommunitySupportSection;

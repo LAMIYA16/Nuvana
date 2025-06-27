@@ -7,8 +7,22 @@ import {
   Box,
   Container,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate('/signin'); 
+  };
+
+  const handleJoinCommunity = () => {
+    const section = document.getElementById('join-community');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <AppBar
       position="fixed"
@@ -24,7 +38,7 @@ export default function Navbar() {
           
           <Box display="flex" alignItems="center">
             <img
-              src="/nuvana logo.png" 
+              src="/nuvana logo.png"
               alt="Nuvana Logo"
               style={{ width: 40, height: 40, marginRight: 10 }}
             />
@@ -38,7 +52,7 @@ export default function Navbar() {
             </Box>
           </Box>
 
-          {/* Nav buttons that scroll to section IDs */}
+         
           <Box display="flex" alignItems="center" gap={3}>
             <Button color="inherit" href="#features">Features</Button>
             <Button color="inherit" href="#resources">Resources</Button>
@@ -46,10 +60,11 @@ export default function Navbar() {
             <Button color="inherit" href="#about">About</Button>
           </Box>
 
-          {/* Auth buttons */}
+
           <Box display="flex" gap={1}>
             <Button
               variant="outlined"
+              onClick={handleSignIn}
               sx={{
                 textTransform: 'none',
                 borderRadius: 2,
@@ -59,6 +74,7 @@ export default function Navbar() {
             </Button>
             <Button
               variant="contained"
+              onClick={handleJoinCommunity}
               sx={{
                 textTransform: 'none',
                 borderRadius: 2,

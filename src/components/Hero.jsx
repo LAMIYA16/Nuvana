@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Grid } from '@mui/material';
+import { Stack } from '@mui/material';
 
 export default function Hero() {
   return (
@@ -37,33 +38,60 @@ export default function Hero() {
       </Typography>
 
       <Box sx={{ mt: 4 }}>
+  
+
+<Stack direction="row" spacing={2} justifyContent="center">
   <Button
     variant="contained"
     sx={{
-      mr: 2,
-      backgroundColor: 'hsla(350, 73.00%, 53.50%, 0.69)', 
+      px: 4,
+      py: 1.5,
+      minWidth: 200,
+      backgroundColor: 'hsla(350, 73.00%, 53.50%, 0.69)',
       color: 'white',
+      fontWeight: 'bold',
+      borderRadius: 2,
       '&:hover': {
-        backgroundColor: 'rgba(199, 97, 129, 0.85)', 
+        backgroundColor: 'rgba(199, 97, 129, 0.85)',
       },
     }}
+    onClick={() => {
+      const section = document.getElementById('join-community');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }}
   >
-    Join Our Community
+    Join Community
   </Button>
+
   <Button
     variant="outlined"
     sx={{
-      color: ' rgb(58, 56, 58)',
+      px: 4,
+      py: 1.5,
+      minWidth: 200,
+      fontWeight: 'bold',
+      borderRadius: 2,
+      color: 'rgb(58, 56, 58)',
       borderColor: 'rgb(205, 64, 104)',
       '&:hover': {
-        backgroundColor: 'rgb(185, 94, 130)', 
+        backgroundColor: 'rgb(185, 94, 130)',
         borderColor: 'rgb(161, 60, 97)',
-        color: 'rgb(255, 255, 255)',
+        color: '#fff',
       },
+    }}
+    onClick={() => {
+      const section = document.getElementById('resources-section');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }}
   >
     Explore Resources
   </Button>
+</Stack>
+
 </Box>
 
 
