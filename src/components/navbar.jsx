@@ -13,7 +13,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleSignIn = () => {
-    navigate('/signin'); 
+    navigate('/signin'); // Adjust this path if you implement a SignIn page
   };
 
   const handleJoinCommunity = () => {
@@ -27,7 +27,7 @@ export default function Navbar() {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundColor: '#ffffff',
         color: '#1a1a1a',
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         zIndex: (theme) => theme.zIndex.drawer + 1,
@@ -35,7 +35,7 @@ export default function Navbar() {
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          
+          {/* Logo + Title */}
           <Box display="flex" alignItems="center">
             <img
               src="/nuvana logo.png"
@@ -52,7 +52,7 @@ export default function Navbar() {
             </Box>
           </Box>
 
-         
+          {/* Navigation Links */}
           <Box display="flex" alignItems="center" gap={3}>
             <Button color="inherit" href="#features">Features</Button>
             <Button color="inherit" href="#resources">Resources</Button>
@@ -60,15 +60,12 @@ export default function Navbar() {
             <Button color="inherit" href="#about">About</Button>
           </Box>
 
-
+          {/* Action Buttons */}
           <Box display="flex" gap={1}>
             <Button
               variant="outlined"
               onClick={handleSignIn}
-              sx={{
-                textTransform: 'none',
-                borderRadius: 2,
-              }}
+              sx={{ textTransform: 'none', borderRadius: 2 }}
             >
               Sign In
             </Button>
