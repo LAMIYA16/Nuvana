@@ -241,10 +241,19 @@ const MapPage = () => {
   };
 
   const filteredResources = resources.filter((res) => {
-    const matchesSearch = res.city.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "" || res.tags.includes(selectedCategory);
-    return matchesSearch && matchesCategory;
-  });
+  const lowerSearch = searchTerm.toLowerCase();
+
+  const matchesSearch =
+    res.city.toLowerCase().includes(lowerSearch) ||
+    res.address.toLowerCase().includes(lowerSearch) ||
+    res.name.toLowerCase().includes(lowerSearch) || 
+    res.description.toLowerCase().includes(lowerSearch); 
+
+  const matchesCategory = selectedCategory === "" || res.tags.includes(selectedCategory);
+
+  return matchesSearch && matchesCategory;
+});
+
 
   const removeSavedResource = (name) => {
     const updated = savedResources.filter(r => r.name !== name);
