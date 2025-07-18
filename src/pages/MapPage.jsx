@@ -246,7 +246,7 @@ const MapPage = () => {
   const matchesSearch =
     res.city.toLowerCase().includes(lowerSearch) ||
     res.address.toLowerCase().includes(lowerSearch) ||
-    
+    res.name.toLowerCase().includes(lowerSearch) || 
     res.description.toLowerCase().includes(lowerSearch); 
 
   const matchesCategory = selectedCategory === "" || res.tags.includes(selectedCategory);
