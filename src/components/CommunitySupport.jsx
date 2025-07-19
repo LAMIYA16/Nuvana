@@ -79,7 +79,7 @@ function CommunitySupportSection() {
         </Stack>
         <Button
             variant="contained"
-            onClick={() => navigate('/donate')}
+            onClick={() => navigate('/DonationPage')}
             sx={{
              background: 'linear-gradient(to right, #22c55e, #3b82f6)',
              color: 'white',

@@ -13,6 +13,7 @@ import ResourcesPage from "./pages/ResourcesPage";
 import LoginPage from "./pages/LoginPage";
 import Home from "./pages/Home"; // Optional: your home page
 import LettersOfHope from "./pages/LettersOfHope"; // ✅ Added Letters of Hope
+import DonationPage from "./pages/DonationPage";
 
 import { useAuth } from "./context/AuthContext";
 
@@ -54,6 +55,7 @@ const App = () => {
 
         {/* ✅ Letters of Hope page */}
         <Route path="/LettersOfHope" element={<LettersOfHope />} />
+        <Route path="/DonationPage" element={<DonationPage />} />
       </Routes>
     </>
   );
