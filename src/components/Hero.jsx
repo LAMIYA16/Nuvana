@@ -1,10 +1,9 @@
 import React from "react";
-import { Box, Typography, Button, Grid } from "@mui/material";
-import { Stack } from "@mui/material";
+import { Box, Typography, Button, Grid, Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -12,33 +11,54 @@ export default function Hero() {
         textAlign: "center",
         py: 8,
         px: 2,
-        backgroundImage: "linear-gradient(to bottom,rgb(216, 169, 179), #ffffff)",
+        backgroundImage: "linear-gradient(to bottom, #fffaf3, #ffffff)",
         backgroundSize: "cover",
       }}
     >
+      {/* Tagline Banner */}
       <Box
         sx={{
           display: "inline-block",
-          paddingX: 2,
-          paddingY: 0.1,
-          backgroundColor: "rgb(251, 243, 245)",
+          px: 2,
+          py: 0.5,
+          backgroundColor: "#fff2e8",
           borderRadius: "30px",
-          marginBottom: 2,
+          mb: 2,
         }}
       >
-        <Typography variant="subtitle1" fontWeight="bold" sx={{ color: "rgb(63, 60, 61)" }}>
+        <Typography
+          variant="subtitle1"
+          fontWeight="bold"
+          sx={{ color: "#9f4312", fontSize: "0.9rem" }}
+        >
           Empowering Survivors • Building Community • Creating Hope
         </Typography>
       </Box>
 
+      {/* Heading */}
       <Typography variant="h2" component="h1" fontWeight="bold" gutterBottom>
-        A Platform of <span style={{ color: "rgb(184, 118, 98)" }}>Strength & Solidarity</span>
+        A Platform of{" "}
+        <span
+          style={{
+            background: "linear-gradient(to right, #f97316, #ec4899)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Strength & Solidarity
+        </span>
       </Typography>
 
-      <Typography variant="body1" sx={{ maxWidth: 800, mx: "auto", mt: 1 }}>
-        Nuvana connects acid attack survivors across India with resources, support, opportunities, and a community that understands. Together, we rise stronger.
+      {/* Description */}
+      <Typography
+        variant="body1"
+        sx={{ maxWidth: 800, mx: "auto", mt: 1, color: "#4b5563" }}
+      >
+        Nuvana connects acid attack survivors across India with resources, support,
+        opportunities, and a community that understands. Together, we rise stronger.
       </Typography>
 
+      {/* Call to Action */}
       <Box sx={{ mt: 4 }}>
         <Stack direction="row" spacing={2} justifyContent="center">
           <Button
@@ -47,12 +67,13 @@ export default function Hero() {
               px: 4,
               py: 1.5,
               minWidth: 200,
-              backgroundColor: "hsla(350, 73.00%, 53.50%, 0.69)",
+              background: "linear-gradient(to right, #ec4899, #f97316)",
               color: "white",
               fontWeight: "bold",
               borderRadius: 2,
+              boxShadow: 2,
               "&:hover": {
-                backgroundColor: "rgba(199, 97, 129, 0.85)",
+                background: "linear-gradient(to right, #db2777, #fb923c)",
               },
             }}
             onClick={() => {
@@ -64,35 +85,52 @@ export default function Hero() {
           >
             Join Community
           </Button>
-
-          
         </Stack>
       </Box>
 
+      {/* Stats Section */}
       <Box sx={{ mt: 6 }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={4}>
             <Box textAlign="center">
-              <Typography variant="h4" fontWeight="bold" sx={{ color: "rgb(63, 3, 83)" }}>
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                sx={{ color: "#f97316" }}
+              >
                 500+
               </Typography>
-              <Typography variant="subtitle1">Community Members</Typography>
+              <Typography variant="subtitle1" color="text.secondary">
+                Community Members
+              </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Box textAlign="center">
-              <Typography variant="h4" fontWeight="bold" sx={{ color: "rgb(115, 85, 9)" }}>
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                sx={{ color: "#facc15" }}
+              >
                 200+
               </Typography>
-              <Typography variant="subtitle1">Resource Centers</Typography>
+              <Typography variant="subtitle1" color="text.secondary">
+                Resource Centers
+              </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Box textAlign="center">
-              <Typography variant="h4" fontWeight="bold" sx={{ color: "rgb(55, 8, 109)" }}>
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                sx={{ color: "#a855f7" }}
+              >
                 50+
               </Typography>
-              <Typography variant="subtitle1">Success Stories</Typography>
+              <Typography variant="subtitle1" color="text.secondary">
+                Success Stories
+              </Typography>
             </Box>
           </Grid>
         </Grid>
