@@ -9,9 +9,12 @@ import CommunitySupport from "./components/CommunitySupport";
 import JoinCommunity from "./components/JoinCommunity";
 import Footer from "./components/Footer";
 
-import ResourcesPage from "./pages/ResourcesPage"; 
+import ResourcesPage from "./pages/ResourcesPage";
+import LoginPage from "./pages/LoginPage";
+import Home from "./pages/Home"; // Optional: your home page
+import LettersOfHope from "./pages/LettersOfHope"; // ✅ Added Letters of Hope
+
 import { useAuth } from "./context/AuthContext";
-import LoginPage from './pages/LoginPage';
 
 const App = () => {
   const { user } = useAuth();
@@ -22,7 +25,7 @@ const App = () => {
       <Box sx={{ pt: "60px" }} />
 
       <Routes>
-        
+        {/* Landing page */}
         <Route
           path="/"
           element={
@@ -35,24 +38,22 @@ const App = () => {
           }
         />
 
-        
+        {/* Login page */}
         <Route path="/login" element={<LoginPage />} />
 
-
-        
+        {/* Protected home route (optional) */}
         <Route
           path="/home"
           element={
-            user ? (
-              <FeaturesGrid />
-            ) : (
-              <Navigate to="/signin" replace />
-            )
+            user ? <Home /> : <Navigate to="/login" replace />
           }
         />
 
-      
+        {/* Resources page */}
         <Route path="/resources" element={<ResourcesPage />} />
+
+        {/* ✅ Letters of Hope page */}
+        <Route path="/LettersOfHope" element={<LettersOfHope />} />
       </Routes>
     </>
   );

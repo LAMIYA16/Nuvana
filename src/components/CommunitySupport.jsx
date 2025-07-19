@@ -43,7 +43,7 @@ function CommunitySupportSection() {
         </Stack>
          <Button
              variant="contained"
-             onClick={() => navigate('/letters-of-hope')}
+             onClick={() => navigate('/LettersOfHope')}
              sx={{
                  background: 'linear-gradient(to right, #ec4899, #8b5cf6)',
                  color: 'white',
