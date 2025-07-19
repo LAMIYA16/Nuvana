@@ -51,18 +51,7 @@ export default function JoinCommunity() {
         >
           Create Your Profile
         </Button>
-        <Button
-          variant="outlined"
-          onClick={handleExploreResources}
-          sx={{
-            borderColor: 'white',
-            color: 'white',
-            px: 3,
-            '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
-          }}
-        >
-          Explore Resources
-        </Button>
+        
       </Stack>
     </Box>
   );

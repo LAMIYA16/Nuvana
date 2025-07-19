@@ -13,7 +13,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleSignIn = () => {
-    navigate('/signin'); // Adjust this path if you implement a SignIn page
+    navigate('/login'); 
   };
 
   const handleJoinCommunity = () => {
@@ -35,7 +35,7 @@ export default function Navbar() {
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          {/* Logo + Title */}
+          
           <Box display="flex" alignItems="center">
             <img
               src="/nuvana logo.png"
@@ -52,15 +52,9 @@ export default function Navbar() {
             </Box>
           </Box>
 
-          {/* Navigation Links */}
-          <Box display="flex" alignItems="center" gap={3}>
-            <Button color="inherit" href="#features">Features</Button>
-            <Button color="inherit" href="#resources">Resources</Button>
-            <Button color="inherit" href="#support">Support</Button>
-            <Button color="inherit" href="#about">About</Button>
-          </Box>
-
-          {/* Action Buttons */}
+          
+          
+          
           <Box display="flex" gap={1}>
             <Button
               variant="outlined"

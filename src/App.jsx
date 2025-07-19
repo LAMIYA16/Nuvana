@@ -1,39 +1,60 @@
+// src/App.jsx
 import React from "react";
-import { Box } from '@mui/material';
-import Navbar from './components/navbar';
-import Hero from './components/Hero';
-import FeaturesGrid from './components/FeaturesGrid';
-import CommunitySupport from './components/CommunitySupport';
-import JoinCommunity from './components/JoinCommunity';
-import Footer from "./components/Footer";
-/*import SignIn from './pages/SignIn';*/
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Box } from "@mui/material";
 
+import Navbar from "./components/navbar";
+import Hero from "./components/Hero";
+import CommunitySupport from "./components/CommunitySupport";
+import JoinCommunity from "./components/JoinCommunity";
+import Footer from "./components/Footer";
+
+import ResourcesPage from "./pages/ResourcesPage"; 
+import { useAuth } from "./context/AuthContext";
+import LoginPage from './pages/LoginPage';
 
 const App = () => {
+  const { user } = useAuth();
+
   return (
-    <div>
+    <>
       <Navbar />
-      <Box sx={{ pt: '60px' }}></Box>
+      <Box sx={{ pt: "60px" }} />
 
-      <section id="resources">
-        <Hero/>
-      
+      <Routes>
         
-      </section>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <CommunitySupport />
+              <JoinCommunity />
+              <Footer />
+            </>
+          }
+        />
 
-      <section id="features">
-        <FeaturesGrid/>
-      </section>
+        
+        <Route path="/login" element={<LoginPage />} />
 
-      <section id="support">
-        <CommunitySupport />
-      </section>
 
-      <section id="about">
-        <JoinCommunity />
-        <Footer />
-      </section>
-    </div>
+        
+        <Route
+          path="/home"
+          element={
+            user ? (
+              <FeaturesGrid />
+            ) : (
+              <Navigate to="/signin" replace />
+            )
+          }
+        />
+
+      
+        <Route path="/resources" element={<ResourcesPage />} />
+      </Routes>
+    </>
   );
 };
 

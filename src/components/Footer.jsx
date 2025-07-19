@@ -35,7 +35,7 @@ const Footer = () => {
     <Box sx={{ backgroundColor: '#0d121b', color: '#b0bec5', py: 6 }}>
       <Container maxWidth="lg">
         <Grid container spacing={6}>
-          {/* Logo & Intro */}
+          
           <Grid item xs={12} sm={6} md={6}>
             <Box display="flex" alignItems="center" mb={2}>
               <Box
@@ -59,7 +59,7 @@ const Footer = () => {
             </Typography>
           </Grid>
 
-          {/* Community Links */}
+         
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" color="white" gutterBottom>
               Community
@@ -102,32 +102,8 @@ const Footer = () => {
             </Typography>
           </Grid>
 
-          {/* Resources */}
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="h6" color="white" gutterBottom>
-              Resources
-            </Typography>
-            <Typography>
-              <Link
-                onClick={() => scrollAndHighlight('feature-map')}
-                underline="hover"
-                color="#90a4ae"
-              >
-                Resource Map
-              </Link>
-            </Typography>
-            <Typography>
-              <Link
-                onClick={() => scrollAndHighlight('feature-legal')}
-                underline="hover"
-                color="#90a4ae"
-              >
-                Legal Aid
-              </Link>
-            </Typography>
-          </Grid>
-
-          {/* Support Links */}
+          
+          
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" color="white" gutterBottom>
               Support
@@ -162,7 +138,7 @@ const Footer = () => {
           </Grid>
         </Grid>
 
-        {/* Footer Note */}
+        
         <Box textAlign="center" mt={5}>
           <Typography variant="body2" sx={{ color: '#cfd8dc' }}>
             © 2025 Nuvana. Made with{' '}
@@ -172,7 +148,6 @@ const Footer = () => {
         </Box>
       </Container>
 
-      {/* Contact Modal */}
       <Modal open={openContact} onClose={() => setOpenContact(false)}>
         <Box
           sx={{
@@ -199,7 +174,7 @@ const Footer = () => {
         </Box>
       </Modal>
 
-      {/* Privacy Policy Modal */}
+      
       <Modal open={openPrivacy} onClose={() => setOpenPrivacy(false)}>
         <Box
           sx={{
