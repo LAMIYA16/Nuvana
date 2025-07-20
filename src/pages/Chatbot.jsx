@@ -75,8 +75,9 @@ const Chatbot = () => {
     "Legal Documentation",
   ];
 
-  return (
-    <Container maxWidth="lg" sx={{ mt: 4 }}>
+  return (<Container maxWidth="lg" sx={{ py: 15 }}>
+
+
       <Box
         sx={{
           display: "flex",
