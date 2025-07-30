@@ -1,6 +1,3 @@
-Here's a comprehensive and well-formatted `README.md` for your Nuvana project:
-
-```markdown
 # 🌼 Nuvana
 
 **Empowering Acid Attack Survivors in India through Technology, Community & Care.**
@@ -11,18 +8,33 @@ Nuvana is a web platform designed to support and uplift acid attack survivors in
 
 ## 🌟 Key Features
 
-* **👥 Survivor Profiles & Directory:** Secure, optional profiles for survivors to share their journeys, build connections, and foster solidarity.
-* **🗺️ Geo-tagged Resource Map:** An interactive map of India displaying verified locations of:
-    * NGOs
-    * Legal Aid Services
-    * Medical & Reconstructive Surgery Centers
-    * Counseling and Rehab Facilities
-* **⚖️ LLM-powered Legal Aid Assistant:** An AI chatbot that simplifies legal procedures like compensation claims, FIR filing, and protection laws, and connects survivors with nearby pro-bono legal support.
-* **💼 Skill Building & Inclusive Job Board:** Access to free vocational and digital literacy courses, and job postings from employers practicing inclusive hiring.
-* **💬 Peer Support Forum (Moderated):** A safe, supportive community for sharing, advice, and healing through shared experience.
-* **🌈 Inspiration Hub:** Celebrating transformation stories, survivor-led initiatives, and campaigns.
-* **💌 Letters of Hope:** Public submissions of artwork, poems, and letters to uplift and spread compassion.
-* **💝 Donation & Fundraising Portal:** Transparent channels to support individual survivors or NGOs with tracking and updates.
+- **👥 Survivor Profiles & Directory**  
+  Secure, optional profiles for survivors to share their journeys, build connections, and foster solidarity.
+
+- **🗺️ Geo-tagged Resource Map**  
+  An interactive map of India displaying verified locations of:
+  - NGOs  
+  - Legal Aid Services  
+  - Medical & Reconstructive Surgery Centers  
+  - Counseling and Rehab Facilities
+
+- **⚖️ LLM-powered Legal Aid Assistant**  
+  An AI chatbot that simplifies legal procedures like compensation claims, FIR filing, and protection laws, and connects survivors with nearby pro-bono legal support.
+
+- **💼 Skill Building & Inclusive Job Board**  
+  Access to free vocational and digital literacy courses, and job postings from employers practicing inclusive hiring.
+
+- **💬 Peer Support Forum (Moderated)**  
+  A safe, supportive community for sharing, advice, and healing through shared experience.
+
+- **🌈 Inspiration Hub**  
+  Celebrating transformation stories, survivor-led initiatives, and campaigns.
+
+- **💌 Letters of Hope**  
+  Public submissions of artwork, poems, and letters to uplift and spread compassion.
+
+- **💝 Donation & Fundraising Portal**  
+  Transparent channels to support individual survivors or NGOs with tracking and updates.
 
 ---
 
@@ -30,16 +42,16 @@ Nuvana is a web platform designed to support and uplift acid attack survivors in
 
 ### 🔹 Frontend
 
-* **React + Vite:** For fast development and optimized build performance.
-* **Tailwind CSS:** A utility-first CSS framework for rapid and consistent styling.
-* **Material UI:** Pre-built, accessible, and responsive UI components.
+- **React + Vite** – For fast development and optimized build performance  
+- **Tailwind CSS** – A utility-first CSS framework for rapid and consistent styling  
+- **Material UI** – Pre-built, accessible, and responsive UI components
 
 ### 🔸 Backend
 
-* **Supabase:** Provides authentication, database, and real-time chat in one solution for faster backend development.
-* **OpenStreetMap API:** For ethical, open-source geolocation and mapping.
-* **Gemini 2.0 (Flash):** An LLM to power the conversational legal aid chatbot with contextual responses.
-* **Stripe:** A secure donation gateway with support for transparency and donation tracking.
+- **Supabase** – Provides authentication, database, and real-time chat features  
+- **OpenStreetMap API** – For ethical, open-source geolocation and mapping  
+- **Gemini 2.0 (Flash)** – LLM powering the conversational legal aid chatbot  
+- **Stripe** – Secure donation gateway with transparency and donation tracking
 
 ---
 
@@ -87,26 +99,9 @@ Your app will be available at: `http://localhost:5173`
 
 -----
 
-## 🤝 Contributing
+## 👥 Contributors
 
-We welcome contributions from developers, designers, and advocates\! Feel free to fork the repository, submit issues, or open a pull request.
-
------
-
-## 📜 License
-
-This project is licensed under the **MIT License**. See the `LICENSE` file for more information.
-
------
-
-## 🙏 Acknowledgements
-
-  * **Acid attack survivors** whose strength inspired Nuvana.
-  * **Open-source communities** enabling accessible innovation.
-  * **Partner NGOs, healthcare professionals, and educators**.
-  * **Everyone contributing to a world of healing, dignity, and inclusion**.
-
-<!-- end list -->
-
-```
-```
+- [Aswini P](https://github.com/aswini1212)
+- [Adhina Anup](https://github.com/adhinaanup)
+- [Diya Elsa George](https://github.com/diya-e-g)
+- [Lamiya Yasmin A S](https://github.com/LAMIYA16)
